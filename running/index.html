@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<script>
+<link rel="stylesheet" href="index.tw.css">
+<script type="text/tailwind-config">
 tailwind.config = {
   theme: { extend: {
     colors: {
@@ -33,7 +33,7 @@ tailwind.config = {
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
 </style>
 </head>
-<body class="font-body text-slate-700 bg-white antialiased">
+<body class="font-body text-[15px] md:text-base text-slate-700 bg-white antialiased">
 
 <header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-kon/10">
   <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between gap-3">
@@ -41,7 +41,7 @@ tailwind.config = {
       <img src="../img/um.png" alt="ウマクスクール" class="h-8 w-auto">
       <span class="hidden sm:inline font-display font-bold text-kon">ウマクスクール</span>
     </a>
-    <a href="../?program=%E8%B5%B0%E3%82%8A%E6%96%B9%E6%95%99%E5%AE%A4#entry" class="inline-flex items-center gap-1.5 bg-ac hover:bg-ac-dark text-white font-bold text-sm px-4 py-2.5 rounded-full shadow-card transition-colors">
+    <a href="../?program=%E8%B5%B0%E3%82%8A%E6%96%B9%E6%95%99%E5%AE%A4#entry" class="hidden md:inline-flex items-center gap-1.5 bg-ac hover:bg-ac-dark text-white font-bold text-sm px-4 py-2.5 rounded-full shadow-card transition-colors">
       体験を申し込む <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg>
     </a>
   </div>
@@ -49,28 +49,62 @@ tailwind.config = {
 
 <main>
 
-<section class="relative bg-kon text-white pt-24 pb-14 md:pt-32 md:pb-20 overflow-hidden">
+<section class="relative bg-kon text-white pt-20 pb-12 md:pt-32 md:pb-20 overflow-hidden">
   <div class="lane absolute inset-0" aria-hidden="true"></div>
   <div class="relative max-w-5xl mx-auto px-4 grid md:grid-cols-[1.4fr_1fr] gap-8 items-center">
     <div class="min-w-0">
       <p class="inline-block bg-vita-yellow text-kon text-xs font-bold px-3 py-1 rounded-full">小学生中心・中学生歓迎</p>
-      <h1 class="mt-4 font-display font-black text-4xl md:text-6xl leading-tight">走り方教室</h1>
+      <h1 class="mt-4 font-display font-black text-[2.4rem] md:text-6xl leading-tight">走り方教室</h1>
       <p class="mt-3 font-display font-bold text-lg md:text-2xl text-vita-yellow">速く走れる「体」と、速く走る「コツ」。</p>
       <p class="mt-4 leading-relaxed text-white/90">前半は阪堺病院SCAのスタッフによる体づくり、後半は陸上の指導員による走り方の技術。運動会はもちろん、どんなスポーツにもつながる「走る土台」をつくります。</p>
-      <div class="mt-6 flex flex-wrap gap-3">
-        <a href="../?program=%E8%B5%B0%E3%82%8A%E6%96%B9%E6%95%99%E5%AE%A4#entry" class="inline-flex items-center gap-2 bg-vita-orange hover:bg-vita-dark text-white font-bold px-6 py-3.5 rounded-full shadow-card transition-colors">体験を申し込む <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg></a>
-        <a href="#coach" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 font-bold px-6 py-3.5 rounded-full transition-colors">指導員を見る</a>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        <a href="../?program=%E8%B5%B0%E3%82%8A%E6%96%B9%E6%95%99%E5%AE%A4#entry" class="inline-flex items-center justify-center gap-2 bg-vita-orange hover:bg-vita-dark text-white font-bold px-6 py-3.5 rounded-full shadow-card transition-colors">体験を申し込む <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg></a>
+        <a href="#coach" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 font-bold px-6 py-3.5 rounded-full transition-colors">指導するのは</a>
       </div>
     </div>
-    <figure class="relative mx-auto w-56 md:w-72">
-      <div class="absolute -inset-3 rounded-[2rem] bg-vita-orange/80 rotate-3" aria-hidden="true"></div>
-      <img src="../img/coach_kibe.jpg" alt="岐部あゆか指導員" class="relative rounded-[1.75rem] w-full aspect-[3/4] object-cover bg-black">
-      <figcaption class="relative mt-3 text-center text-sm font-bold">岐部あゆか指導員（陸上）</figcaption>
-    </figure>
+    <div class="order-first md:order-none -mx-1 md:mx-0">
+      <svg viewBox="0 0 400 300" class="w-full max-w-[300px] md:max-w-md mx-auto" role="img" aria-label="トラックを走る子どもたちのイラスト">
+        <circle cx="360" cy="40" r="24" fill="#F9B915" opacity=".9"/>
+        <path d="M0 210 Q200 170 400 205 L400 300 L0 300Z" fill="#E4572E"/>
+        <path d="M0 232 Q200 196 400 228" stroke="#fff" stroke-width="2.5" fill="none" opacity=".75"/>
+        <path d="M0 258 Q200 224 400 254" stroke="#fff" stroke-width="2.5" fill="none" opacity=".75"/>
+        <path d="M0 284 Q200 252 400 280" stroke="#fff" stroke-width="2.5" fill="none" opacity=".75"/>
+        <g stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".55"><path d="M40 120h40M28 140h46M48 160h30"/><path d="M168 98h34M156 118h40"/></g>
+        <!-- 子ども1（オレンジ） -->
+        <g transform="translate(110 92)" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="40" cy="14" r="14" fill="#FFD7B5"/><path d="M27 8a14 14 0 0 1 26 0" fill="#3B2A1E"/>
+          <path d="M36 30 L28 78" stroke="#F5821F" stroke-width="20"/>
+          <path d="M34 40 L58 52 L72 40" stroke="#FFD7B5" stroke-width="8" fill="none"/>
+          <path d="M32 40 L12 56 L2 48" stroke="#FFD7B5" stroke-width="8" fill="none"/>
+          <path d="M28 78 L52 96 L48 122" stroke="#22346B" stroke-width="10" fill="none"/>
+          <path d="M26 80 L8 104 L-14 98" stroke="#22346B" stroke-width="10" fill="none"/>
+          <path d="M44 124 l14 0" stroke="#fff" stroke-width="7"/><path d="M-18 96 l-4 10" stroke="#fff" stroke-width="7"/>
+        </g>
+        <!-- 子ども2（グリーン・前） -->
+        <g transform="translate(246 82) scale(1.08)" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="40" cy="14" r="14" fill="#F2C29B"/><path d="M26 12c0-12 28-12 28 0" fill="#222"/><path d="M52 10 l10 6" stroke="#222" stroke-width="5"/>
+          <path d="M37 30 L30 78" stroke="#3E9B4F" stroke-width="20"/>
+          <path d="M35 40 L56 30 L66 14" stroke="#F2C29B" stroke-width="8" fill="none"/>
+          <path d="M33 42 L16 60 L4 56" stroke="#F2C29B" stroke-width="8" fill="none"/>
+          <path d="M30 78 L56 88 L56 116" stroke="#22346B" stroke-width="10" fill="none"/>
+          <path d="M28 80 L16 106 L-6 112" stroke="#22346B" stroke-width="10" fill="none"/>
+          <path d="M52 118 l14 0" stroke="#fff" stroke-width="7"/><path d="M-10 112 l-2 10" stroke="#fff" stroke-width="7"/>
+        </g>
+        <!-- 子ども3（イエロー・後ろ） -->
+        <g transform="translate(18 128) scale(.82)" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="40" cy="14" r="14" fill="#FFD7B5"/><path d="M25 14c0-14 30-14 30 0" fill="#5A3A22"/><circle cx="24" cy="20" r="6" fill="#5A3A22"/>
+          <path d="M37 30 L30 78" stroke="#F9B915" stroke-width="20"/>
+          <path d="M35 40 L58 50 L70 38" stroke="#FFD7B5" stroke-width="8" fill="none"/>
+          <path d="M33 42 L14 58 L4 50" stroke="#FFD7B5" stroke-width="8" fill="none"/>
+          <path d="M30 78 L54 94 L50 120" stroke="#22346B" stroke-width="10" fill="none"/>
+          <path d="M28 80 L10 102 L-12 96" stroke="#22346B" stroke-width="10" fill="none"/>
+        </g>
+      </svg>
+    </div>
   </div>
 </section>
 
-<section class="py-14 md:py-20 dots">
+<section class="py-12 md:py-20 dots">
   <div class="max-w-5xl mx-auto px-4">
     <p class="font-display font-bold text-ac tracking-widest text-xs">POINT</p><h2 class="mt-1 font-display font-black text-kon text-2xl md:text-3xl">この教室の3つのポイント</h2>
     <div class="mt-6 grid md:grid-cols-3 gap-4">
@@ -81,7 +115,7 @@ tailwind.config = {
   </div>
 </section>
 
-<section class="py-14 md:py-20 bg-white">
+<section class="py-12 md:py-20 bg-white">
   <div class="max-w-3xl mx-auto px-4">
     <p class="font-display font-bold text-ac tracking-widest text-xs">PROGRAM</p><h2 class="mt-1 font-display font-black text-kon text-2xl md:text-3xl">1回の流れ（例）</h2>
     <p class="mt-3 text-sm text-slate-500">内容は参加者の学年・人数に合わせて調整します。</p>
@@ -89,7 +123,7 @@ tailwind.config = {
   </div>
 </section>
 
-<section id="coach" class="py-14 md:py-20 bg-kon-light">
+<section id="coach" class="py-12 md:py-20 bg-kon-light">
   <div class="max-w-5xl mx-auto px-4">
     <p class="font-display font-bold text-ac tracking-widest text-xs">COACH</p><h2 class="mt-1 font-display font-black text-kon text-2xl md:text-3xl">指導するのは</h2>
     <div class="mt-6 grid md:grid-cols-2 gap-5">
@@ -105,27 +139,27 @@ tailwind.config = {
   </div>
 </section>
 
-<section class="py-14 md:py-20 bg-white">
+<section class="py-12 md:py-20 bg-white">
   <div class="max-w-3xl mx-auto px-4">
     <p class="font-display font-bold text-ac tracking-widest text-xs">INFO</p><h2 class="mt-1 font-display font-black text-kon text-2xl md:text-3xl">開催概要</h2>
-    <dl class="mt-6 bg-white rounded-2xl shadow-card px-5 md:px-7 py-2"><div class="grid grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">対象</dt><dd class="text-sm leading-relaxed min-w-0">小学生中心（中学生も歓迎）</dd></div><div class="grid grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">体験会</dt><dd class="text-sm leading-relaxed min-w-0"><span class="font-bold text-kon">2027年1月開催予定</span>　日程・会場は<span class="inline-block text-xs font-bold bg-vita-yellow/25 text-kon px-2 py-0.5 rounded">決まり次第お知らせ</span></dd></div><div class="grid grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">参加費</dt><dd class="text-sm leading-relaxed min-w-0"><span class="inline-block text-xs font-bold bg-vita-yellow/25 text-kon px-2 py-0.5 rounded">決まり次第お知らせ</span></dd></div><div class="grid grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">持ち物</dt><dd class="text-sm leading-relaxed min-w-0">運動しやすい服装・運動靴・飲み物</dd></div><div class="grid grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">指導</dt><dd class="text-sm leading-relaxed min-w-0">岐部あゆか指導員（陸上）／阪堺病院SCA（体づくり）</dd></div></dl>
+    <dl class="mt-6 bg-white rounded-2xl shadow-card px-5 md:px-7 py-2"><div class="grid grid-cols-[5.5rem_1fr] sm:grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">対象</dt><dd class="text-sm leading-relaxed min-w-0">小学生中心（中学生も歓迎）</dd></div><div class="grid grid-cols-[5.5rem_1fr] sm:grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">体験会</dt><dd class="text-sm leading-relaxed min-w-0"><span class="font-bold text-kon">2027年1月開催予定</span>　日程・会場は<span class="inline-block text-xs font-bold bg-vita-yellow/25 text-kon px-2 py-0.5 rounded">決まり次第お知らせ</span></dd></div><div class="grid grid-cols-[5.5rem_1fr] sm:grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">参加費</dt><dd class="text-sm leading-relaxed min-w-0"><span class="inline-block text-xs font-bold bg-vita-yellow/25 text-kon px-2 py-0.5 rounded">決まり次第お知らせ</span></dd></div><div class="grid grid-cols-[5.5rem_1fr] sm:grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">持ち物</dt><dd class="text-sm leading-relaxed min-w-0">運動しやすい服装・運動靴・飲み物</dd></div><div class="grid grid-cols-[5.5rem_1fr] sm:grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">指導</dt><dd class="text-sm leading-relaxed min-w-0">岐部あゆか指導員（陸上）／阪堺病院SCA（体づくり）</dd></div></dl>
   </div>
 </section>
 
-<section class="py-14 md:py-20 dots">
+<section class="py-12 md:py-20 dots">
   <div class="max-w-3xl mx-auto px-4">
     <p class="font-display font-bold text-ac tracking-widest text-xs">FAQ</p><h2 class="mt-1 font-display font-black text-kon text-2xl md:text-3xl">よくある質問</h2>
-    <div class="mt-6 grid gap-3"><details class="bg-white rounded-2xl shadow-card p-5"><summary class="font-bold text-kon cursor-pointer">足が遅くても参加できますか？</summary><p class="mt-2 text-sm leading-relaxed">もちろんです。「今より速く走れるようになりたい」という気持ちがあれば大丈夫です。走り方は練習で変わります。</p></details><details class="bg-white rounded-2xl shadow-card p-5"><summary class="font-bold text-kon cursor-pointer">ほかのスポーツをしていても参加できますか？</summary><p class="mt-2 text-sm leading-relaxed">はい。走る力はサッカー・野球・バスケットボールなど、多くのスポーツの土台になります。</p></details><details class="bg-white rounded-2xl shadow-card p-5"><summary class="font-bold text-kon cursor-pointer">のびしろノートとは何ですか？</summary><p class="mt-2 text-sm leading-relaxed">ウマクスクールの成長記録アプリです。測定した記録を残し、伸びをグラフなどで確認できます。保護者の方には記録カードをお届けする予定です。</p></details></div>
+    <div class="mt-6 grid gap-3"><details class="bg-white rounded-2xl shadow-card p-5"><summary class="font-bold text-kon cursor-pointer py-1">足が遅くても参加できますか？</summary><p class="mt-2 text-sm leading-relaxed">もちろんです。「今より速く走れるようになりたい」という気持ちがあれば大丈夫です。走り方は練習で変わります。</p></details><details class="bg-white rounded-2xl shadow-card p-5"><summary class="font-bold text-kon cursor-pointer py-1">ほかのスポーツをしていても参加できますか？</summary><p class="mt-2 text-sm leading-relaxed">はい。走る力はサッカー・野球・バスケットボールなど、多くのスポーツの土台になります。</p></details><details class="bg-white rounded-2xl shadow-card p-5"><summary class="font-bold text-kon cursor-pointer py-1">のびしろノートとは何ですか？</summary><p class="mt-2 text-sm leading-relaxed">ウマクスクールの成長記録アプリです。測定した記録を残し、伸びをグラフなどで確認できます。保護者の方には記録カードをお届けする予定です。</p></details></div>
   </div>
 </section>
 
 
 <!-- 申込 -->
-<section class="py-14 md:py-20 bg-ac-soft">
+<section class="py-12 md:py-20 bg-ac-soft">
   <div class="max-w-3xl mx-auto px-4 text-center">
     <h2 class="font-display font-black text-kon text-2xl md:text-3xl">体験・お問い合わせはこちらから</h2>
     <p class="mt-3 text-sm md:text-base">ウマクスクールのお申し込みフォームに移動します。<br class="hidden sm:inline">「走り方教室」にチェックが入った状態で開きます。日程などが決まり次第、ご連絡します。</p>
-    <a href="../?program=%E8%B5%B0%E3%82%8A%E6%96%B9%E6%95%99%E5%AE%A4#entry" class="mt-6 inline-flex items-center gap-2 bg-kon hover:bg-kon-deep text-white font-display font-bold text-lg px-8 py-4 rounded-full shadow-card transition-colors">
+    <a href="../?program=%E8%B5%B0%E3%82%8A%E6%96%B9%E6%95%99%E5%AE%A4#entry" class="mt-6 w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-kon hover:bg-kon-deep text-white font-display font-bold text-lg px-8 py-4 rounded-full shadow-card transition-colors">
       申し込みフォームへ <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg>
     </a>
     <p class="mt-4 text-xs text-slate-500">メールでのお問い合わせ：<span class="select-all font-bold text-kon">Umaku.school@gmail.com</span></p>
@@ -133,8 +167,13 @@ tailwind.config = {
 </section>
 </main>
 
-<footer class="bg-kon-deep text-white/80 text-sm">
-  <div class="max-w-5xl mx-auto px-4 py-8 flex flex-col sm:flex-row gap-3 justify-between">
+<!-- スマホ用 固定申込バー -->
+<div class="md:hidden fixed inset-x-0 bottom-0 z-50 bg-white/95 backdrop-blur border-t border-kon/10 px-4 pt-2.5" style="padding-bottom:max(.625rem,env(safe-area-inset-bottom))">
+  <a href="../?program=%E8%B5%B0%E3%82%8A%E6%96%B9%E6%95%99%E5%AE%A4#entry" class="flex items-center justify-center gap-2 w-full bg-vita-orange active:bg-vita-dark text-white font-display font-bold text-base py-3.5 rounded-full shadow-card">走り方教室を申し込む <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg></a>
+</div>
+
+<footer class="bg-kon-deep text-white/80 text-sm pb-24 md:pb-0">
+  <div class="max-w-5xl mx-auto px-5 py-8 flex flex-col sm:flex-row gap-3 justify-between leading-relaxed">
     <p>運営：ウマクスクール設立準備委員会</p>
     <p><a href="../#programs" class="underline underline-offset-4">ほかのプログラムを見る</a>　｜　<a href="../" class="underline underline-offset-4">ウマクスクールのトップへ</a></p>
   </div>

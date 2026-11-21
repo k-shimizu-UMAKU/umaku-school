@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<script>
+<link rel="stylesheet" href="index.tw.css">
+<script type="text/tailwind-config">
 tailwind.config = {
   theme: { extend: {
     colors: {
@@ -33,7 +33,7 @@ tailwind.config = {
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
 </style>
 </head>
-<body class="font-body text-slate-700 bg-white antialiased">
+<body class="font-body text-[15px] md:text-base text-slate-700 bg-white antialiased">
 
 <header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-kon/10">
   <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between gap-3">
@@ -41,7 +41,7 @@ tailwind.config = {
       <img src="../img/um.png" alt="ウマクスクール" class="h-8 w-auto">
       <span class="hidden sm:inline font-display font-bold text-kon">ウマクスクール</span>
     </a>
-    <a href="../?program=%E9%A3%9F%E8%82%B2%E8%AC%9B%E7%BF%92%E4%BC%9A#entry" class="inline-flex items-center gap-1.5 bg-ac hover:bg-ac-dark text-white font-bold text-sm px-4 py-2.5 rounded-full shadow-card transition-colors">
+    <a href="../?program=%E9%A3%9F%E8%82%B2%E8%AC%9B%E7%BF%92%E4%BC%9A#entry" class="hidden md:inline-flex items-center gap-1.5 bg-ac hover:bg-ac-dark text-white font-bold text-sm px-4 py-2.5 rounded-full shadow-card transition-colors">
       体験を申し込む <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg>
     </a>
   </div>
@@ -49,29 +49,27 @@ tailwind.config = {
 
 <main>
 
-<section class="relative bg-[#FFF5EA] pt-24 pb-14 md:pt-32 md:pb-20 overflow-hidden">
-  <div class="absolute -right-24 -top-24 w-80 h-80 rounded-full bg-vita-orange/15" aria-hidden="true"></div>
-  <div class="absolute -left-16 bottom-0 w-56 h-56 rounded-full bg-vita-green/10" aria-hidden="true"></div>
-  <div class="relative max-w-5xl mx-auto px-4 grid md:grid-cols-[1.4fr_1fr] gap-8 items-center">
-    <div class="min-w-0">
+<section class="relative pt-16 overflow-hidden bg-kon-deep">
+  <div class="relative md:absolute md:inset-0">
+    <img src="../img/shokuiku_lecture.jpg" alt="ウマクの食の講義の様子" class="w-full aspect-[4/3] md:aspect-auto md:h-full object-cover object-[75%_center] md:object-center">
+    <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-kon-deep to-transparent md:h-full md:inset-0 md:bg-gradient-to-r md:from-kon-deep md:via-kon-deep/75 md:to-transparent" aria-hidden="true"></div>
+  </div>
+  <div class="relative max-w-5xl mx-auto px-4 -mt-6 pb-10 md:mt-0 md:pt-28 md:pb-24 text-white">
+    <div class="md:max-w-xl">
       <p class="inline-block bg-vita-green text-white text-xs font-bold px-3 py-1 rounded-full">親子・ジュニアアスリート向け</p>
-      <h1 class="mt-4 font-display font-black text-kon text-4xl md:text-6xl leading-tight">食育講習会</h1>
-      <p class="mt-3 font-display font-bold text-lg md:text-2xl text-vita-dark">強い体は、毎日のごはんから。</p>
-      <p class="mt-4 leading-relaxed">元・在ケニア日本大使公邸料理長で、アスリートの食事サポートも手がける<span class="font-bold text-kon">小林勉シェフ</span>が講師。成長期の子どもとスポーツをがんばる子に向けて、家庭でできる「食」のコツを親子で学びます。</p>
-      <div class="mt-6 flex flex-wrap gap-3">
-        <a href="../?program=%E9%A3%9F%E8%82%B2%E8%AC%9B%E7%BF%92%E4%BC%9A#entry" class="inline-flex items-center gap-2 bg-vita-orange hover:bg-vita-dark text-white font-bold px-6 py-3.5 rounded-full shadow-card transition-colors">参加を申し込む <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg></a>
-        <a href="#chef" class="inline-flex items-center gap-2 bg-white hover:bg-orange-50 border border-vita-orange/40 text-vita-dark font-bold px-6 py-3.5 rounded-full transition-colors">講師のプロフィール</a>
+      <h1 class="mt-4 font-display font-black text-[2.4rem] md:text-6xl leading-tight">食育講習会</h1>
+      <p class="mt-3 font-display font-bold text-lg md:text-2xl text-vita-yellow">強い体は、毎日のごはんから。</p>
+      <p class="mt-4 leading-relaxed text-white/90">元・在ケニア日本大使公邸料理長で、アスリートの食事サポートも手がける<span class="font-bold text-white">小林勉シェフ</span>が講師。成長期の子どもとスポーツをがんばる子に向けて、家庭でできる「食」のコツを親子で学びます。</p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        <a href="../?program=%E9%A3%9F%E8%82%B2%E8%AC%9B%E7%BF%92%E4%BC%9A#entry" class="inline-flex items-center justify-center gap-2 bg-vita-orange hover:bg-vita-dark text-white font-bold px-6 py-3.5 rounded-full shadow-card transition-colors">参加を申し込む <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg></a>
+        <a href="#chef" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 font-bold px-6 py-3.5 rounded-full transition-colors">講師のプロフィール</a>
       </div>
+      <p class="mt-5 text-xs text-white/60">写真：ウマク株式会社による大学での食の講義</p>
     </div>
-    <figure class="relative mx-auto w-56 md:w-72">
-      <div class="absolute inset-0 translate-x-3 translate-y-3 rounded-[2rem] bg-vita-orange" aria-hidden="true"></div>
-      <img src="../img/chef_kobayashi.jpg" alt="小林勉シェフ" class="relative rounded-[1.75rem] w-full aspect-[3/4] object-cover object-top bg-white border-4 border-white">
-      <figcaption class="relative mt-4 text-center text-sm font-bold text-kon">講師：小林 勉 シェフ</figcaption>
-    </figure>
   </div>
 </section>
 
-<section class="py-14 md:py-20 bg-white">
+<section class="py-12 md:py-20 bg-white">
   <div class="max-w-5xl mx-auto px-4">
     <p class="font-display font-bold text-vita-dark tracking-widest text-xs">THEME</p><h2 class="mt-1 font-display font-black text-kon text-2xl md:text-3xl">学べること（予定）</h2>
     <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -84,7 +82,7 @@ tailwind.config = {
   </div>
 </section>
 
-<section id="chef" class="py-14 md:py-20 bg-[#FFF5EA]">
+<section id="chef" class="py-12 md:py-20 bg-[#FFF5EA]">
   <div class="max-w-5xl mx-auto px-4">
     <p class="font-display font-bold text-vita-dark tracking-widest text-xs">CHEF</p><h2 class="mt-1 font-display font-black text-kon text-2xl md:text-3xl">講師プロフィール</h2>
     <div class="mt-6 bg-white rounded-3xl shadow-card p-6 md:p-8 grid md:grid-cols-[220px_1fr] gap-6 md:gap-8 items-start">
@@ -105,32 +103,36 @@ tailwind.config = {
           <span class="text-xs font-bold bg-orange-50 text-vita-dark px-3 py-1.5 rounded-full">著書『極上！神ワザレシピ』（徳間書店）</span>
           <span class="text-xs font-bold bg-kon-light text-kon px-3 py-1.5 rounded-full">テレビ・ラジオ・雑誌出演多数</span>
         </div>
+        <figure class="mt-6">
+          <img src="../img/shokuiku_lecture2.jpg" alt="帝塚山学院大学で講義する小林勉シェフ" class="w-full rounded-2xl aspect-[4/3] object-cover" loading="lazy">
+          <figcaption class="mt-2 text-xs text-slate-500">帝塚山学院大学での講義「アスリートの『勝ち』を創る食事」</figcaption>
+        </figure>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-14 md:py-20 bg-white">
+<section class="py-12 md:py-20 bg-white">
   <div class="max-w-3xl mx-auto px-4">
     <p class="font-display font-bold text-vita-dark tracking-widest text-xs">INFO</p><h2 class="mt-1 font-display font-black text-kon text-2xl md:text-3xl">開催概要</h2>
-    <dl class="mt-6 bg-white rounded-2xl shadow-card px-5 md:px-7 py-2"><div class="grid grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">対象</dt><dd class="text-sm leading-relaxed min-w-0">親子、スポーツをがんばる子ども（ジュニアアスリート）とその保護者</dd></div><div class="grid grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">日程・会場</dt><dd class="text-sm leading-relaxed min-w-0"><span class="inline-block text-xs font-bold bg-vita-yellow/25 text-kon px-2 py-0.5 rounded">決まり次第お知らせ</span></dd></div><div class="grid grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">参加費</dt><dd class="text-sm leading-relaxed min-w-0"><span class="inline-block text-xs font-bold bg-vita-yellow/25 text-kon px-2 py-0.5 rounded">決まり次第お知らせ</span></dd></div><div class="grid grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">講師</dt><dd class="text-sm leading-relaxed min-w-0">小林勉シェフ（ウマク株式会社）</dd></div><div class="grid grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">アレルギー</dt><dd class="text-sm leading-relaxed min-w-0">試食がある回は、事前にアレルギーの有無をうかがいます。</dd></div></dl>
+    <dl class="mt-6 bg-white rounded-2xl shadow-card px-5 md:px-7 py-2"><div class="grid grid-cols-[5.5rem_1fr] sm:grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">対象</dt><dd class="text-sm leading-relaxed min-w-0">親子、スポーツをがんばる子ども（ジュニアアスリート）とその保護者</dd></div><div class="grid grid-cols-[5.5rem_1fr] sm:grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">日程・会場</dt><dd class="text-sm leading-relaxed min-w-0"><span class="inline-block text-xs font-bold bg-vita-yellow/25 text-kon px-2 py-0.5 rounded">決まり次第お知らせ</span></dd></div><div class="grid grid-cols-[5.5rem_1fr] sm:grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">参加費</dt><dd class="text-sm leading-relaxed min-w-0"><span class="inline-block text-xs font-bold bg-vita-yellow/25 text-kon px-2 py-0.5 rounded">決まり次第お知らせ</span></dd></div><div class="grid grid-cols-[5.5rem_1fr] sm:grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">講師</dt><dd class="text-sm leading-relaxed min-w-0">小林勉シェフ（ウマク株式会社）</dd></div><div class="grid grid-cols-[5.5rem_1fr] sm:grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">アレルギー</dt><dd class="text-sm leading-relaxed min-w-0">試食がある回は、事前にアレルギーの有無をうかがいます。</dd></div></dl>
   </div>
 </section>
 
-<section class="py-14 md:py-20 bg-[#FFF5EA]">
+<section class="py-12 md:py-20 bg-[#FFF5EA]">
   <div class="max-w-3xl mx-auto px-4">
     <p class="font-display font-bold text-vita-dark tracking-widest text-xs">FAQ</p><h2 class="mt-1 font-display font-black text-kon text-2xl md:text-3xl">よくある質問</h2>
-    <div class="mt-6 grid gap-3"><details class="bg-white rounded-2xl shadow-card p-5"><summary class="font-bold text-kon cursor-pointer">保護者だけの参加もできますか？</summary><p class="mt-2 text-sm leading-relaxed">はい。毎日のごはんを作る保護者の方だけのご参加も歓迎です。</p></details><details class="bg-white rounded-2xl shadow-card p-5"><summary class="font-bold text-kon cursor-pointer">スポーツをしていなくても参加できますか？</summary><p class="mt-2 text-sm leading-relaxed">もちろんです。成長期の子どもに大切な食事の考え方は、スポーツをしていない子にも役立ちます。</p></details><details class="bg-white rounded-2xl shadow-card p-5"><summary class="font-bold text-kon cursor-pointer">料理が苦手でも大丈夫ですか？</summary><p class="mt-2 text-sm leading-relaxed">大丈夫です。家庭で無理なく続けられる、簡単な工夫を中心にお伝えします。</p></details></div>
+    <div class="mt-6 grid gap-3"><details class="bg-white rounded-2xl shadow-card p-5"><summary class="font-bold text-kon cursor-pointer py-1">保護者だけの参加もできますか？</summary><p class="mt-2 text-sm leading-relaxed">はい。毎日のごはんを作る保護者の方だけのご参加も歓迎です。</p></details><details class="bg-white rounded-2xl shadow-card p-5"><summary class="font-bold text-kon cursor-pointer py-1">スポーツをしていなくても参加できますか？</summary><p class="mt-2 text-sm leading-relaxed">もちろんです。成長期の子どもに大切な食事の考え方は、スポーツをしていない子にも役立ちます。</p></details><details class="bg-white rounded-2xl shadow-card p-5"><summary class="font-bold text-kon cursor-pointer py-1">料理が苦手でも大丈夫ですか？</summary><p class="mt-2 text-sm leading-relaxed">大丈夫です。家庭で無理なく続けられる、簡単な工夫を中心にお伝えします。</p></details></div>
   </div>
 </section>
 
 
 <!-- 申込 -->
-<section class="py-14 md:py-20 bg-ac-soft">
+<section class="py-12 md:py-20 bg-ac-soft">
   <div class="max-w-3xl mx-auto px-4 text-center">
     <h2 class="font-display font-black text-kon text-2xl md:text-3xl">体験・お問い合わせはこちらから</h2>
     <p class="mt-3 text-sm md:text-base">ウマクスクールのお申し込みフォームに移動します。<br class="hidden sm:inline">「食育講習会」にチェックが入った状態で開きます。日程などが決まり次第、ご連絡します。</p>
-    <a href="../?program=%E9%A3%9F%E8%82%B2%E8%AC%9B%E7%BF%92%E4%BC%9A#entry" class="mt-6 inline-flex items-center gap-2 bg-kon hover:bg-kon-deep text-white font-display font-bold text-lg px-8 py-4 rounded-full shadow-card transition-colors">
+    <a href="../?program=%E9%A3%9F%E8%82%B2%E8%AC%9B%E7%BF%92%E4%BC%9A#entry" class="mt-6 w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-kon hover:bg-kon-deep text-white font-display font-bold text-lg px-8 py-4 rounded-full shadow-card transition-colors">
       申し込みフォームへ <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg>
     </a>
     <p class="mt-4 text-xs text-slate-500">メールでのお問い合わせ：<span class="select-all font-bold text-kon">Umaku.school@gmail.com</span></p>
@@ -138,8 +140,13 @@ tailwind.config = {
 </section>
 </main>
 
-<footer class="bg-kon-deep text-white/80 text-sm">
-  <div class="max-w-5xl mx-auto px-4 py-8 flex flex-col sm:flex-row gap-3 justify-between">
+<!-- スマホ用 固定申込バー -->
+<div class="md:hidden fixed inset-x-0 bottom-0 z-50 bg-white/95 backdrop-blur border-t border-kon/10 px-4 pt-2.5" style="padding-bottom:max(.625rem,env(safe-area-inset-bottom))">
+  <a href="../?program=%E9%A3%9F%E8%82%B2%E8%AC%9B%E7%BF%92%E4%BC%9A#entry" class="flex items-center justify-center gap-2 w-full bg-vita-orange active:bg-vita-dark text-white font-display font-bold text-base py-3.5 rounded-full shadow-card">食育講習会を申し込む <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg></a>
+</div>
+
+<footer class="bg-kon-deep text-white/80 text-sm pb-24 md:pb-0">
+  <div class="max-w-5xl mx-auto px-5 py-8 flex flex-col sm:flex-row gap-3 justify-between leading-relaxed">
     <p>運営：ウマクスクール設立準備委員会</p>
     <p><a href="../#programs" class="underline underline-offset-4">ほかのプログラムを見る</a>　｜　<a href="../" class="underline underline-offset-4">ウマクスクールのトップへ</a></p>
   </div>
