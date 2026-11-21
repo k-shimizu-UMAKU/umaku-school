@@ -450,6 +450,7 @@ tailwind.config = {
           <p class="mt-1 text-xs font-bold text-vita-dark">阪堺病院SCAの「体づくり」つき</p>
           <p class="mt-2 text-sm text-slate-600 leading-relaxed flex-1">前半は阪堺病院SCAのスタッフによる体づくり、後半は陸上指導員による走り方の技術。「速く走れる体」と「速く走るコツ」を一緒に身につけます。運動会や、すべてのスポーツの土台づくりに。</p>
           <p class="mt-4 text-xs text-slate-500 bg-slate-50 rounded-xl p-3.5 leading-relaxed">指導：<span class="font-bold text-kon">岐部あゆか指導員</span>（陸上）・阪堺病院SCA（体づくり）<br>測定した記録は成長記録アプリ「のびしろノート」に残し、伸びを見える化します。</p>
+          <a href="running/" class="mt-4 inline-flex items-center justify-center gap-1.5 rounded-full border-2 border-kon text-kon hover:bg-kon hover:text-white font-bold text-sm px-4 py-2.5 transition-colors">走り方教室の詳細を見る<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
         </div>
       </article>
 
@@ -467,7 +468,8 @@ tailwind.config = {
         <div class="p-6 flex-1 flex flex-col">
           <h3 class="font-display font-black text-kon text-xl">食育講習会</h3>
           <p class="mt-2 text-sm text-slate-600 leading-relaxed flex-1">「食」は強い体と元気な毎日の土台。関西大学の学生・若手研究者と連携し、成長期の栄養やアスリートの食事を楽しく学びます。</p>
-          <p class="mt-4 text-xs text-slate-500 bg-slate-50 rounded-xl p-3.5 leading-relaxed">「食育×スポーツ科学」の栄養サポートプログラムを関西大学と共同開発中です。</p>
+          <p class="mt-4 text-xs text-slate-500 bg-slate-50 rounded-xl p-3.5 leading-relaxed">講師：<span class="font-bold text-kon">小林勉シェフ</span>（元・在ケニア日本大使公邸料理長／ウマク株式会社）<br>「食育×スポーツ科学」の栄養サポートプログラムを関西大学と共同開発中です。</p>
+          <a href="shokuiku/" class="mt-4 inline-flex items-center justify-center gap-1.5 rounded-full border-2 border-vita-orange text-vita-dark hover:bg-vita-orange hover:text-white font-bold text-sm px-4 py-2.5 transition-colors">食育講習会の詳細を見る<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
         </div>
       </article>
 
@@ -486,6 +488,7 @@ tailwind.config = {
           <h3 class="font-display font-black text-kon text-xl">バレーボール教室</h3>
           <p class="mt-2 text-sm text-slate-600 leading-relaxed flex-1">はじめてでも大丈夫。小学生用のボール（4号球）に慣れるところから始めます。保護者の方も一緒に参加できる親子の枠もあります。</p>
           <p class="mt-4 text-xs text-slate-500 bg-slate-50 rounded-xl p-3.5 leading-relaxed">初回は<span class="font-bold text-kon">2027年1月9日（土）午前</span>の予定です。会場・時間は決まり次第お知らせします。</p>
+          <a href="volleyball/" class="mt-4 inline-flex items-center justify-center gap-1.5 rounded-full border-2 border-[#2A9BD0] text-[#1E7FAD] hover:bg-[#2A9BD0] hover:text-white font-bold text-sm px-4 py-2.5 transition-colors">バレーボール教室の詳細を見る<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
         </div>
       </article>
 
@@ -1090,5 +1093,8 @@ document.getElementById('entryForm').addEventListener('submit', async function (
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
+<script>
+(function(){try{var p=new URLSearchParams(location.search).get('program');if(!p)return;document.querySelectorAll('input[name="program"]').forEach(function(c){if(c.value===p)c.checked=true;});}catch(e){}})();
+</script>
 </body>
 </html>

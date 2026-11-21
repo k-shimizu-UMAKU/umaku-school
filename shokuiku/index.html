@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>食育講習会｜ウマクスクール</title>
+<meta name="description" content="元・在ケニア日本大使公邸料理長の小林勉シェフが講師。成長期の子どもとジュニアアスリートのための食事のコツを親子で学ぶ、ウマクスクールの食育講習会。">
+<meta property="og:title" content="食育講習会｜ウマクスクール">
+<meta property="og:description" content="元・在ケニア日本大使公邸料理長の小林勉シェフが講師。成長期の子どもとジュニアアスリートのための食事のコツを親子で学ぶ、ウマクスクールの食育講習会。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://k-shimizu-umaku.github.io/umaku-school/shokuiku/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: {
+      kon:  { light:'#EEF3FB', DEFAULT:'#22346B', deep:'#161F45' },
+      vita: { orange:'#F5821F', dark:'#D96D08', green:'#3E9B4F', greenlight:'#E9F5EB', yellow:'#F9B915' },
+      ac:   { DEFAULT:'#F5821F', dark:'#D96D08', soft:'#FFF5EA' },
+    },
+    fontFamily: { display:['"Zen Maru Gothic"','sans-serif'], body:['"Noto Sans JP"','sans-serif'] },
+    boxShadow: { card:'0 6px 24px -10px rgba(34,52,107,.28)' },
+  } }
+}
+</script>
+<style>
+  html { scroll-behavior:smooth; scroll-padding-top:5rem; }
+  .lane { background-image: repeating-linear-gradient(90deg, rgba(255,255,255,.18) 0 2px, transparent 2px 64px); }
+  .dots { background-image: radial-gradient(rgba(34,52,107,.10) 1.5px, transparent 1.5px); background-size:18px 18px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
+</style>
+</head>
+<body class="font-body text-slate-700 bg-white antialiased">
+
+<header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-kon/10">
+  <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between gap-3">
+    <a href="../" class="flex items-center gap-2 shrink-0" aria-label="ウマクスクールのトップへ">
+      <img src="../img/um.png" alt="ウマクスクール" class="h-8 w-auto">
+      <span class="hidden sm:inline font-display font-bold text-kon">ウマクスクール</span>
+    </a>
+    <a href="../?program=%E9%A3%9F%E8%82%B2%E8%AC%9B%E7%BF%92%E4%BC%9A#entry" class="inline-flex items-center gap-1.5 bg-ac hover:bg-ac-dark text-white font-bold text-sm px-4 py-2.5 rounded-full shadow-card transition-colors">
+      体験を申し込む <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<section class="relative bg-[#FFF5EA] pt-24 pb-14 md:pt-32 md:pb-20 overflow-hidden">
+  <div class="absolute -right-24 -top-24 w-80 h-80 rounded-full bg-vita-orange/15" aria-hidden="true"></div>
+  <div class="absolute -left-16 bottom-0 w-56 h-56 rounded-full bg-vita-green/10" aria-hidden="true"></div>
+  <div class="relative max-w-5xl mx-auto px-4 grid md:grid-cols-[1.4fr_1fr] gap-8 items-center">
+    <div class="min-w-0">
+      <p class="inline-block bg-vita-green text-white text-xs font-bold px-3 py-1 rounded-full">親子・ジュニアアスリート向け</p>
+      <h1 class="mt-4 font-display font-black text-kon text-4xl md:text-6xl leading-tight">食育講習会</h1>
+      <p class="mt-3 font-display font-bold text-lg md:text-2xl text-vita-dark">強い体は、毎日のごはんから。</p>
+      <p class="mt-4 leading-relaxed">元・在ケニア日本大使公邸料理長で、アスリートの食事サポートも手がける<span class="font-bold text-kon">小林勉シェフ</span>が講師。成長期の子どもとスポーツをがんばる子に向けて、家庭でできる「食」のコツを親子で学びます。</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="../?program=%E9%A3%9F%E8%82%B2%E8%AC%9B%E7%BF%92%E4%BC%9A#entry" class="inline-flex items-center gap-2 bg-vita-orange hover:bg-vita-dark text-white font-bold px-6 py-3.5 rounded-full shadow-card transition-colors">参加を申し込む <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg></a>
+        <a href="#chef" class="inline-flex items-center gap-2 bg-white hover:bg-orange-50 border border-vita-orange/40 text-vita-dark font-bold px-6 py-3.5 rounded-full transition-colors">講師のプロフィール</a>
+      </div>
+    </div>
+    <figure class="relative mx-auto w-56 md:w-72">
+      <div class="absolute inset-0 translate-x-3 translate-y-3 rounded-[2rem] bg-vita-orange" aria-hidden="true"></div>
+      <img src="../img/chef_kobayashi.jpg" alt="小林勉シェフ" class="relative rounded-[1.75rem] w-full aspect-[3/4] object-cover object-top bg-white border-4 border-white">
+      <figcaption class="relative mt-4 text-center text-sm font-bold text-kon">講師：小林 勉 シェフ</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="py-14 md:py-20 bg-white">
+  <div class="max-w-5xl mx-auto px-4">
+    <p class="font-display font-bold text-vita-dark tracking-widest text-xs">THEME</p><h2 class="mt-1 font-display font-black text-kon text-2xl md:text-3xl">学べること（予定）</h2>
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="rounded-2xl bg-orange-50 p-5"><p class="text-2xl" aria-hidden="true">🍚</p><p class="mt-2 font-bold text-kon">成長期のごはん</p><p class="mt-1 text-sm leading-relaxed">主食・主菜・副菜をそろえる考え方と、たんぱく質のとり方。</p></div>
+      <div class="rounded-2xl bg-vita-greenlight p-5"><p class="text-2xl" aria-hidden="true">🍙</p><p class="mt-2 font-bold text-kon">練習前後の補食</p><p class="mt-1 text-sm leading-relaxed">いつ・何を食べるといいか。おにぎりやバナナなど身近な食材で。</p></div>
+      <div class="rounded-2xl bg-kon-light p-5"><p class="text-2xl" aria-hidden="true">🥗</p><p class="mt-2 font-bold text-kon">朝ごはんのひと工夫</p><p class="mt-1 text-sm leading-relaxed">忙しい朝でも続けやすい、簡単で栄養のとれる組み合わせ。</p></div>
+      <div class="rounded-2xl bg-yellow-50 p-5"><p class="text-2xl" aria-hidden="true">👨‍🍳</p><p class="mt-2 font-bold text-kon">シェフのプロの技</p><p class="mt-1 text-sm leading-relaxed">家庭のキッチンで使える、おいしく仕上げる調理のコツ。</p></div>
+    </div>
+    <p class="mt-4 text-xs text-slate-500">※内容・形式（講義／調理デモなど）は回ごとに調整します。</p>
+  </div>
+</section>
+
+<section id="chef" class="py-14 md:py-20 bg-[#FFF5EA]">
+  <div class="max-w-5xl mx-auto px-4">
+    <p class="font-display font-bold text-vita-dark tracking-widest text-xs">CHEF</p><h2 class="mt-1 font-display font-black text-kon text-2xl md:text-3xl">講師プロフィール</h2>
+    <div class="mt-6 bg-white rounded-3xl shadow-card p-6 md:p-8 grid md:grid-cols-[220px_1fr] gap-6 md:gap-8 items-start">
+      <img src="../img/chef_kobayashi.jpg" alt="小林勉シェフ" class="w-44 md:w-full mx-auto rounded-2xl aspect-[3/4] object-cover object-top">
+      <div class="min-w-0">
+        <p class="text-sm font-bold text-vita-dark">ウマク株式会社 フードコンサルタント</p>
+        <p class="mt-1 font-display font-black text-kon text-2xl md:text-3xl">小林 勉 <span class="text-base text-slate-500 font-bold">Tsutomu Kobayashi</span></p>
+        <ul class="mt-5 space-y-3 text-sm leading-relaxed border-l-2 border-vita-orange/40 pl-5">
+          <li>奈良のレストランや大阪のホテルで修業し、24歳で心斎橋のレストラン「Ottona」料理長に。ピッツェリアや日本料理店の料理長も経験。</li>
+          <li>29歳でイタリアへ。ミラノの一つ星「Innocenti Evasioni」、トスカーナの二つ星「Da Caino」などで修業。</li>
+          <li>31歳で<span class="font-bold text-kon">在ケニア日本大使公邸料理長</span>に。各国の要人を寿司・天ぷら・イタリア料理などでもてなし、3年の任期を終えて帰国。</li>
+          <li>2016年、心斎橋にトスカーナ州マレンマ地方の料理に特化したレストラン「Enogastronomico Pitigliano」を開業。2017年 Hanako 関西イタリアン部門グランプリ。</li>
+          <li>現在はウマク株式会社で、アスリートの食事サポートやレストランのコンサルティングを担当。</li>
+        </ul>
+        <div class="mt-5 flex flex-wrap gap-2">
+          <span class="text-xs font-bold bg-vita-greenlight text-vita-green px-3 py-1.5 rounded-full">アスリートフードマイスター®</span>
+          <span class="text-xs font-bold bg-vita-greenlight text-vita-green px-3 py-1.5 rounded-full">スポーツフードマイスター®</span>
+          <span class="text-xs font-bold bg-orange-50 text-vita-dark px-3 py-1.5 rounded-full">著書『極上！神ワザレシピ』（徳間書店）</span>
+          <span class="text-xs font-bold bg-kon-light text-kon px-3 py-1.5 rounded-full">テレビ・ラジオ・雑誌出演多数</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-14 md:py-20 bg-white">
+  <div class="max-w-3xl mx-auto px-4">
+    <p class="font-display font-bold text-vita-dark tracking-widest text-xs">INFO</p><h2 class="mt-1 font-display font-black text-kon text-2xl md:text-3xl">開催概要</h2>
+    <dl class="mt-6 bg-white rounded-2xl shadow-card px-5 md:px-7 py-2"><div class="grid grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">対象</dt><dd class="text-sm leading-relaxed min-w-0">親子、スポーツをがんばる子ども（ジュニアアスリート）とその保護者</dd></div><div class="grid grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">日程・会場</dt><dd class="text-sm leading-relaxed min-w-0"><span class="inline-block text-xs font-bold bg-vita-yellow/25 text-kon px-2 py-0.5 rounded">決まり次第お知らせ</span></dd></div><div class="grid grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">参加費</dt><dd class="text-sm leading-relaxed min-w-0"><span class="inline-block text-xs font-bold bg-vita-yellow/25 text-kon px-2 py-0.5 rounded">決まり次第お知らせ</span></dd></div><div class="grid grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">講師</dt><dd class="text-sm leading-relaxed min-w-0">小林勉シェフ（ウマク株式会社）</dd></div><div class="grid grid-cols-[6.5rem_1fr] gap-3 py-3.5 border-b border-kon/10 last:border-0"><dt class="font-bold text-kon text-sm">アレルギー</dt><dd class="text-sm leading-relaxed min-w-0">試食がある回は、事前にアレルギーの有無をうかがいます。</dd></div></dl>
+  </div>
+</section>
+
+<section class="py-14 md:py-20 bg-[#FFF5EA]">
+  <div class="max-w-3xl mx-auto px-4">
+    <p class="font-display font-bold text-vita-dark tracking-widest text-xs">FAQ</p><h2 class="mt-1 font-display font-black text-kon text-2xl md:text-3xl">よくある質問</h2>
+    <div class="mt-6 grid gap-3"><details class="bg-white rounded-2xl shadow-card p-5"><summary class="font-bold text-kon cursor-pointer">保護者だけの参加もできますか？</summary><p class="mt-2 text-sm leading-relaxed">はい。毎日のごはんを作る保護者の方だけのご参加も歓迎です。</p></details><details class="bg-white rounded-2xl shadow-card p-5"><summary class="font-bold text-kon cursor-pointer">スポーツをしていなくても参加できますか？</summary><p class="mt-2 text-sm leading-relaxed">もちろんです。成長期の子どもに大切な食事の考え方は、スポーツをしていない子にも役立ちます。</p></details><details class="bg-white rounded-2xl shadow-card p-5"><summary class="font-bold text-kon cursor-pointer">料理が苦手でも大丈夫ですか？</summary><p class="mt-2 text-sm leading-relaxed">大丈夫です。家庭で無理なく続けられる、簡単な工夫を中心にお伝えします。</p></details></div>
+  </div>
+</section>
+
+
+<!-- 申込 -->
+<section class="py-14 md:py-20 bg-ac-soft">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <h2 class="font-display font-black text-kon text-2xl md:text-3xl">体験・お問い合わせはこちらから</h2>
+    <p class="mt-3 text-sm md:text-base">ウマクスクールのお申し込みフォームに移動します。<br class="hidden sm:inline">「食育講習会」にチェックが入った状態で開きます。日程などが決まり次第、ご連絡します。</p>
+    <a href="../?program=%E9%A3%9F%E8%82%B2%E8%AC%9B%E7%BF%92%E4%BC%9A#entry" class="mt-6 inline-flex items-center gap-2 bg-kon hover:bg-kon-deep text-white font-display font-bold text-lg px-8 py-4 rounded-full shadow-card transition-colors">
+      申し込みフォームへ <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg>
+    </a>
+    <p class="mt-4 text-xs text-slate-500">メールでのお問い合わせ：<span class="select-all font-bold text-kon">Umaku.school@gmail.com</span></p>
+  </div>
+</section>
+</main>
+
+<footer class="bg-kon-deep text-white/80 text-sm">
+  <div class="max-w-5xl mx-auto px-4 py-8 flex flex-col sm:flex-row gap-3 justify-between">
+    <p>運営：ウマクスクール設立準備委員会</p>
+    <p><a href="../#programs" class="underline underline-offset-4">ほかのプログラムを見る</a>　｜　<a href="../" class="underline underline-offset-4">ウマクスクールのトップへ</a></p>
+  </div>
+</footer>
+</body>
+</html>
