@@ -11,8 +11,8 @@
 <meta property="og:title" content="ウマクスクール｜“やりたい”が言えるスポーツ環境を。">
 <meta property="og:description" content="堺市堺区発・多世代型の総合型地域スポーツクラブ。体験会を順次開催予定！">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://example.com/">
-<meta property="og:image" content="https://example.com/ogp.jpg">
+<meta property="og:url" content="https://k-shimizu-umaku.github.io/umaku-school/">
+<meta property="og:image" content="https://k-shimizu-umaku.github.io/umaku-school/academy/img/ogp.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
 
 <!-- Googleフォント：見出し＝Zen Maru Gothic（丸ゴシックで温かみ）／本文＝Noto Sans JP（信頼感） -->
@@ -110,6 +110,7 @@ tailwind.config = {
       <a href="#partners" class="hover:text-vita-orange transition-colors">連携体制</a>
       <a href="#schedule" class="hover:text-vita-orange transition-colors">スケジュール</a>
       <a href="#faq" class="hover:text-vita-orange transition-colors">よくある質問</a>
+      <a href="academy/" class="inline-flex items-center gap-1.5 text-vita-dark font-bold hover:text-vita-orange transition-colors"><span class="w-2 h-2 rounded-full bg-vita-orange"></span>12/13イベント</a>
       <a href="#entry" class="inline-flex items-center gap-1.5 bg-vita-orange hover:bg-vita-dark text-white font-bold px-5 py-2.5 rounded-full shadow-card transition-colors">
         体験会に申し込む
         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg>
@@ -126,6 +127,7 @@ tailwind.config = {
   <!-- スマホ用メニュー -->
   <div id="mobileMenu" class="lg:hidden hidden border-t border-kon/10 bg-white">
     <nav class="max-w-6xl mx-auto px-5 py-4 flex flex-col gap-1 text-kon font-medium">
+      <a href="academy/" class="menu-link py-3 border-b border-slate-100 text-vita-dark font-bold">● 12/13イベント「いい調子ACADEMY in 堺」</a>
       <a href="#vision"   class="menu-link py-3 border-b border-slate-100">私たちの想い</a>
       <a href="#programs" class="menu-link py-3 border-b border-slate-100">プログラム</a>
       <a href="#partners" class="menu-link py-3 border-b border-slate-100">連携体制</a>
@@ -182,6 +184,11 @@ tailwind.config = {
       </ul>
     </div>
 
+    <!-- スマホ用：12/13イベントのバナー（イベント期間中のみ。終わったらこのブロックを削除） -->
+    <a href="academy/" class="lg:hidden block rounded-3xl overflow-hidden shadow-soft">
+      <img src="academy/img/banner_sq.png" alt="いい調子ACADEMY in 堺　2026年12月13日（日）J-GREEN堺　申込受付中" class="w-full h-auto" width="1080" height="1080">
+    </a>
+
     <!-- 右：多世代グラウンドのイラスト（コード描画） -->
     <div class="relative mx-auto w-full max-w-md aspect-square" aria-hidden="true">
       <!-- グラウンド（トラック） -->
@@ -227,12 +234,32 @@ tailwind.config = {
 </section>
 
 <!-- ================= お知らせバー ================= -->
-<div class="bg-vita-green text-white">
-  <a href="#schedule" class="max-w-6xl mx-auto px-5 py-3.5 flex items-center justify-center gap-3 text-sm md:text-base font-bold hover:opacity-90 transition-opacity">
-    <span class="shrink-0 bg-white text-vita-green text-xs px-2.5 py-0.5 rounded-full">NEWS</span>
-    <span>体験会をいよいよ順次スタート！日程は決まり次第お知らせします → 開催予定へ</span>
+<div class="bg-vita-orange text-white">
+  <a href="academy/" class="max-w-6xl mx-auto px-5 py-3.5 flex items-center justify-center gap-3 text-sm md:text-base font-bold hover:opacity-90 transition-opacity">
+    <span class="shrink-0 bg-white text-vita-dark text-xs px-2.5 py-0.5 rounded-full">申込受付中</span>
+    <span>12/13（日）いい調子ACADEMY in 堺｜親子で選べるスポーツ体験 → 詳しく見る</span>
   </a>
 </div>
+
+<!-- ================= イベントバナー（12/13） ================= -->
+<section class="hidden lg:block py-10 md:py-14 bg-white">
+  <div class="max-w-6xl mx-auto px-5">
+    <a href="academy/" class="block rounded-3xl overflow-hidden shadow-soft hover:-translate-y-0.5 transition-transform">
+      <picture>
+        <source media="(max-width: 640px)" srcset="academy/img/banner_sq.png">
+        <img src="academy/img/banner_wide.png" alt="いい調子ACADEMY in 堺　2026年12月13日（日）J-GREEN堺　申込受付中" class="w-full h-auto" width="1600" height="600">
+      </picture>
+    </a>
+    <div class="mt-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <p class="text-slate-600">aub × ウマクスクール共同開催。サッカー・走り方教室・ダンスから選べる親子のスポーツ体験です。<br class="hidden md:block">小学4年生〜中学2年生／参加費1人2,000円／<b class="text-vita-dark">申込締切 12/11（金）</b></p>
+      <div class="flex flex-wrap gap-3 shrink-0">
+        <a href="academy/" class="inline-flex items-center gap-2 bg-white border-2 border-kon/20 hover:border-vita-orange text-kon font-bold px-6 py-3 rounded-full transition-colors">詳しく見る</a>
+        <a href="https://iichoshi-academy-sakai-2026.peatix.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-vita-orange hover:bg-vita-dark text-white font-bold px-6 py-3 rounded-full shadow-card transition-colors">Peatixで申し込む
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ================= 堺区のいま（課題） ================= -->
 <section class="py-16 md:py-24">
@@ -619,15 +646,23 @@ tailwind.config = {
     <!-- 予定リスト（編集ポイント：カードを複製して行事を追加できます） -->
     <div class="reveal mt-10 md:mt-14 max-w-3xl mx-auto">
       <div class="space-y-3">
-        <div class="bg-white rounded-2xl p-5 shadow-card flex flex-wrap items-center gap-x-4 gap-y-2">
+        <a href="academy/" class="bg-white rounded-2xl p-5 shadow-card flex flex-wrap items-center gap-x-4 gap-y-2 ring-2 ring-vita-orange hover:-translate-y-0.5 transition-transform">
           <span class="text-[11px] font-bold bg-vita-orange text-white px-3 py-1 rounded-full">受付中</span>
+          <div class="flex-1 min-w-[220px]">
+            <p class="font-bold text-kon">いい調子ACADEMY in 堺（aub × ウマクスクール共同開催）</p>
+            <p class="text-xs text-slate-500 mt-0.5">2026年12月13日（日）9:00–13:00／J-GREEN堺／小学4年生〜中学2年生</p>
+          </div>
+          <span class="text-sm font-bold text-vita-dark">詳しく見る →</span>
+        </a>
+        <div class="bg-white rounded-2xl p-5 shadow-card flex flex-wrap items-center gap-x-4 gap-y-2">
+          <span class="text-[11px] font-bold bg-slate-200 text-slate-600 px-3 py-1 rounded-full">準備中</span>
           <div class="flex-1 min-w-[220px]">
             <p class="font-bold text-kon">幼児体操・ダンス体験会 vol.1</p>
             <p class="text-xs text-slate-500 mt-0.5">日程調整中／会場：市小学校 または 関西大学 堺キャンパス</p>
           </div>
         </div>
         <div class="bg-white rounded-2xl p-5 shadow-card flex flex-wrap items-center gap-x-4 gap-y-2">
-          <span class="text-[11px] font-bold bg-vita-orange text-white px-3 py-1 rounded-full">受付中</span>
+          <span class="text-[11px] font-bold bg-slate-200 text-slate-600 px-3 py-1 rounded-full">準備中</span>
           <div class="flex-1 min-w-[220px]">
             <p class="font-bold text-kon">グラウンドゴルフ交流会</p>
             <p class="text-xs text-slate-500 mt-0.5">日程調整中／会場：市小学校グラウンド（予定）</p>
